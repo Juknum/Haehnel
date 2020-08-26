@@ -1,0 +1,7 @@
+url: "https://juknum.github.io/Valerie.io/"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
