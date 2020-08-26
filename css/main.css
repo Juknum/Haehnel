@@ -98,6 +98,9 @@ h2, h3, h4, h5 {
 .card[data-model] {
   cursor: pointer;
 }
+.card {
+  border: 0 !important;
+}
 
 .img-centered{
   width: 50%;
