@@ -1,0 +1,18 @@
+---
+layout: default
+title: Galerie - Silhouettes
+---
+
+<p>HELLO</p>
+
+{%- assign ligne = 0 -%}
+
+{%- for image in site.static_files -%}
+	{%- if image.path contains 'image/galerie/silhouettes' -%}
+		
+		{% for element in collection %}
+			
+		{% endfor %}
+
+	{%- endif -%}
+{%- endfor -%}
