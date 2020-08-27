@@ -17,7 +17,7 @@ description: Silhouette
 		{%- endif -%}
 
 			<!-- {{ Count }} -->
-			<div class="card" style="width: 33%;">
+			<div class="card">
 				<img style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 				<div class="card-body text-center">
 					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
@@ -33,6 +33,7 @@ description: Silhouette
 		{%- if Count == 3 -%}
 			{%- assign Count = 0 -%}
 			</div>
+			<hr>
 		{%- endif -%}
 
 	{%- endif -%}
