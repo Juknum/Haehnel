@@ -18,28 +18,6 @@ main {
   }
 }
 
-/* navbar */
-.custom-navbar-wrapper {
-  position: sticky;
-  top: 0;
-  background: #1B1B1B;
-  z-index: 1020;
-}
-@media (min-width: 800px) {
-  .custom-navbar-wrapper {
-    text-align: center;
-  }
-  .custom-navbar {
-    display: inline-flex;
-  }
-  .lang-navbar {
-    display: block;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-  }
-}
-
 /* Prev & Next icons */
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
@@ -70,10 +48,7 @@ h2, h3, h4, h5 {
 
 /* navbar */
 .custom-navbar-wrapper {
-  position: sticky;
-  top: 0;
-  background: #1B1B1B;
-  z-index: 1;
+  z-index: 100;
 }
 @media (min-width: 800px) {
   .custom-navbar-wrapper {
@@ -81,12 +56,6 @@ h2, h3, h4, h5 {
   }
   .custom-navbar {
     display: inline-flex;
-  }
-  .lang-navbar {
-    display: block;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
   }
 }
 
@@ -116,7 +85,7 @@ h2, h3, h4, h5 {
 
 .modal {
   display: none; /* Hidden by default */
-  z-index: 2; /* Sit on top of navbar*/
+  z-index: 200; /* Sit on top of navbar*/
   padding-top: 100px; /* Location of the box */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9) /* Black w/ opacity */
