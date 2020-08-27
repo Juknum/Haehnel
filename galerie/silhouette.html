@@ -11,9 +11,10 @@ description: Silhouette
 {%- for image in site.static_files -%}
 	{%- if image.path contains 'image/galerie/silhouette' -%}
 
+	{%- assign imageName = image.basename | split: " - " -%}
+
 		{%- if Count < 3 -%}
 
-			{%- assign Count = Count | plus: 1 -%}
 			<div class="card">
 				<img style="object-fit: contain;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 				<div class="card-body text-center">
@@ -27,15 +28,19 @@ description: Silhouette
 				</div>
 			</div>
 
+			{%- assign Count = Count | plus: 1 -%}
+
 		{%- else -%}
 
-			</div>
-			<hr>
-			<div class="card-deck">
+</div>
+
+<hr>
+
+<div class="card-deck">
+
 			{%- assign Count = 1 -%}
 
 		{%- endif -%}
 
 	{%- endif -%}
-
 {%- endfor -%}
