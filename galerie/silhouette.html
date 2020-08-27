@@ -5,7 +5,6 @@ description: Silhouette
 ---
 
 {%- assign Count = 1 -%}
-{%- assign Line  = 0 -%}
 
 <div class="card-deck">
 
@@ -13,13 +12,6 @@ description: Silhouette
 	{%- if image.path contains 'image/galerie/silhouette' -%}
 
 	{%- assign imageName = image.basename | split: " - " -%}
-
-		{%- if Count == 1  and Line > 1 -%}
-
-<hr>
-<div class="card-deck">
-
-		{%- endif -%}
 
 		{%- if Count < 4 -%}
 
@@ -43,8 +35,11 @@ description: Silhouette
 
 </div>
 
+<hr>
+
+<div class="card-deck">
+
 			{%- assign Count = 1 -%}
-			{%- assign Line  = Line | plus: 1 -%}
 
 		{%- endif -%}
 
