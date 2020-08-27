@@ -4,16 +4,17 @@ title: Galerie
 description: Silhouette
 ---
 
-{%- assign Count = 1 -%}
-
-<div class="card-deck">
+{%- assign Count = 0 -%}
 
 {%- for image in site.static_files -%}
 	{%- if image.path contains 'image/galerie/silhouette' -%}
 
-	{%- assign imageName = image.basename | split: " - " -%}
+		{%- assign Count = Count | plus: 1 -%}
+		{%- assign imageName = image.basename | split: " - " -%}
 
-		{%- if Count < 3 -%}
+		{%- if Count == 1 -%}
+			<div class="card-deck">	
+		{%- endif -%}
 
 			<!-- {{ Count }} -->
 			<div class="card" style="width: 33%;">
@@ -29,31 +30,9 @@ description: Silhouette
 				</div>
 			</div>
 
-			{%- assign Count = Count | plus: 1 -%}
-
-		{%- else -%}
-
-</div>
-
-<hr>
-
-<div class="card-deck">
-		<!-- {{ Count }} -->
-			<div class="card" style="width: 33%;">
-				<img style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
-				<div class="card-body text-center">
-					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
-
-					{%- if imageName[1] == "Vendue" -%}
-						<p class="card-text"><small>Vendue</small></p>
-				  {%- else -%}
-				  	<p class="card-text"><small>{{ imageName[1] }} - {{ imageName[2] }}</small></p>
-				  {%- endif -%}
-				</div>
+		{%- if Count == 3 -%}
+			{%- assign Count = 0 -%}
 			</div>
-
-			{%- assign Count = 1 -%}
-
 		{%- endif -%}
 
 	{%- endif -%}
