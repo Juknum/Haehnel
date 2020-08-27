@@ -10,7 +10,7 @@ description: Silhouette
   	{%- assign imageName = image.basename | split: " - " -%}
 
   	<div class="card">
-  		<img style="object-fit: contain;" class="card-img-top" src="{{ image.path }}" alt="{{ image.basename }}">
+  		<img style="object-fit: contain;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 		  <div class="card-body text-center">
 		    <p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
