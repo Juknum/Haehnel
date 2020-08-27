@@ -15,8 +15,9 @@ description: Silhouette
 
 		{%- if Count < 3 -%}
 
-			<div class="card">
-				<img style="object-fit: contain;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
+			<!-- {{ Count }} -->
+			<div class="card" style="width: 33%;">
+				<img style="object-fit: contain; height: 200px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 				<div class="card-body text-center">
 					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
