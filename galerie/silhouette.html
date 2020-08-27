@@ -4,7 +4,7 @@ title: Galerie
 description: Silhouette
 ---
 
-{%- assign Count = 0 -%}
+{%- assign Count = 1 -%}
 
 <div class="card-deck">
 
@@ -13,7 +13,7 @@ description: Silhouette
 
 	{%- assign imageName = image.basename | split: " - " -%}
 
-		{%- if Count < 4 -%}
+		{%- if Count < 3 -%}
 
 			<!-- {{ Count }} -->
 			<div class="card" style="width: 33%;">
@@ -38,8 +38,21 @@ description: Silhouette
 <hr>
 
 <div class="card-deck">
+		<!-- {{ Count }} -->
+			<div class="card" style="width: 33%;">
+				<img style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
+				<div class="card-body text-center">
+					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
-			{%- assign Count = 0 -%}
+					{%- if imageName[1] == "Vendue" -%}
+						<p class="card-text"><small>Vendue</small></p>
+				  {%- else -%}
+				  	<p class="card-text"><small>{{ imageName[1] }} - {{ imageName[2] }}</small></p>
+				  {%- endif -%}
+				</div>
+			</div>
+
+			{%- assign Count = 1 -%}
 
 		{%- endif -%}
 
