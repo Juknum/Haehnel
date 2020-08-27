@@ -86,21 +86,18 @@ h2, h3, h4, h5 {
 .modal {
   display: none; /* Hidden by default */
   z-index: 200; /* Sit on top of navbar*/
-  padding-top: 100px; /* Location of the box */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9) /* Black w/ opacity */
 }
 
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
   max-width: 700px
 }
 
 @media only screen and (max-width: 700px){
   .modal-content {
-    width: 100%
+    width: 100% !important;
   }
 }
 
