@@ -4,6 +4,11 @@ title: Galerie
 description: Silhouette
 ---
 
+<div id="ShowFullscreen" class="modal" style="display: none;">
+	<span id="SF-Span" class="close" style="height:100%; width:100%; z-index:-1"></span>
+	<img  id="SF-Img"  class="modal-content card-texture" style="height:auto; width:100%; max-height: 85%; object-fit: contain;">	
+</div>
+
 {%- assign Count = 0 -%}
 
 {%- for image in site.static_files -%}
@@ -18,14 +23,14 @@ description: Silhouette
 
 			<!-- {{ Count }} -->
 			<div class="card">
-				<img style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
+				<img onclick="ShowFullscreen('{{ site.baseurl }}'+'{{ image.path }}')" style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 				<div class="card-body text-center">
 					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
 					{%- if imageName[1] == "Vendue" -%}
-						<p class="card-text"><small>Vendue</small></p>
+						<p class="card-text">Vendue</p>
 				  {%- else -%}
-				  	<p class="card-text"><small>{{ imageName[1] }} - {{ imageName[2] }}</small></p>
+				  	<p class="card-text">{{ imageName[1] }} - {{ imageName[2] }}</p>
 				  {%- endif -%}
 				</div>
 			</div>
@@ -38,3 +43,5 @@ description: Silhouette
 
 	{%- endif -%}
 {%- endfor -%}
+
+<script type="text/javascript" src="{{ site.baseurl }}/js/ShowFullscreen.js"></script>
