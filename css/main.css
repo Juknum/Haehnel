@@ -73,7 +73,7 @@ h2, h3, h4, h5 {
   position: sticky;
   top: 0;
   background: #1B1B1B;
-  z-index: 1020;
+  z-index: 1;
 }
 @media (min-width: 800px) {
   .custom-navbar-wrapper {
@@ -116,7 +116,7 @@ h2, h3, h4, h5 {
 
 .modal {
   display: none; /* Hidden by default */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top of navbar*/
   padding-top: 100px; /* Location of the box */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9) /* Black w/ opacity */
