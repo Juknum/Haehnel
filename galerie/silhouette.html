@@ -4,15 +4,23 @@ title: Galerie
 description: Silhouette
 ---
 
-		<div class="card">
-      <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-      <div class="card-body text-center">
-        <p class="card-text"><i><strong>Titre de l'oeuvre</strong></i></p>
-        <p class="card-text"><small>720x480</small></p>
-      </div>
-    </div>
+{%- for image in site.static_files -%}
+  {%- if image.path contains 'image/galerie/silhouette' -%}
 
-<img style="object-fit: contain; width: 50px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="">
-<img style="object-fit: contain; width: 50px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="">
-<img style="object-fit: contain; width: 50px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="">
-<img style="object-fit: contain; width: 50px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="">
+  	{%- assign imageName = image.basename | split: " - " -%}
+
+  	<div class="card">
+  		<img style="object-fit: contain;" class="card-img-top" src="{{ image.path }}" alt="{{ image.basename }}">
+		  <div class="card-body text-center">
+		    <p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
+
+		    {%- if imageName[1] == "Vendue" -%}
+					<p class="card-text"><small>Vendue</small></p>
+		    {%- else -%}
+		    	<p class="card-text"><small>{{ imageName[1] }} - {{ imageName[2] }}</small></p>
+		    {%- endif -%}
+		  </div>
+  	</div>
+
+  {%- endif -%}
+{%- endfor -%}
