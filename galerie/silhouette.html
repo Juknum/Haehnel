@@ -23,11 +23,11 @@ description: Silhouette
 
 			<!-- {{ Count }} -->
 			<div class="card">
-				<img onclick="ShowFullscreen('{{ site.baseurl }}'+'{{ image.path }}')" style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
+				<img loading="lazy" onclick="ShowFullscreen('{{ site.baseurl }}'+'{{ image.path }}')" style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
 				<div class="card-body text-center">
 					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
-					{%- if imageName[1] == "Vendue" -%}
+					{%- if imageName[1] == "VENDUE" -%}
 						<p class="card-text">Vendue</p>
 				  {%- else -%}
 				  	<p class="card-text">{{ imageName[1] }} - {{ imageName[2] }}</p>
