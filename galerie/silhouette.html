@@ -27,7 +27,7 @@ description: Silhouette
 				<div class="card-body text-center">
 					<p class="card-text"><i><strong>{{ imageName[0] }}</strong></i></p>
 
-					{%- if imageName[1] == "VENDUE" or imageName[0] == "Vendue" or imageName[0] == "VENDUES" -%}
+					{%- if imageName[1] == "VENDUE" or imageName[1] == "Vendue" or imageName[1] == "VENDUES" -%}
 						<p class="card-text">Vendue</p>
 				  {%- else -%}
 				  	<p class="card-text">{{ imageName[1] }} - {{ imageName[2] }}</p>
