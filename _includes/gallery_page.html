@@ -13,9 +13,12 @@
 </div>
 
 <div class="paintings">
+  {%- assign found = false -%}
+
   {%- for image in site.static_files -%}
     {%- if image.path contains include.galleryPath -%}
       {%- assign imageName = image.basename | split: " - " -%}
+      {%- assign found = true -%}
 
         {%- if image.path contains "small" -%}
         <button class="painting" onclick="ShowFullscreen(`{{ site.baseurl }}`+`{{ image.path | replace_first: 'small', 'big' }}`)">
@@ -32,6 +35,10 @@
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
+
+  {%- if found == false -%}
+    <p>Aucun tableau n'a encore été ajouté!</p>
+  {%- endif -%}
 </div>
 
 <script type="text/javascript" src="{{ site.baseurl }}/js/ShowFullscreen.js"></script>
