@@ -223,6 +223,12 @@ a:hover {
   background-color: var(--dark-3);
   border: none;
   border-radius: 8px;
+  max-height: 500px;
+}
+
+.painting > img {
+  object-fit: contain;
+  max-height: 450px;
 }
 
 .painting:hover {

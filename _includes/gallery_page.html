@@ -15,21 +15,21 @@
 <div class="paintings">
   {%- for image in site.static_files -%}
     {%- if image.path contains include.galleryPath -%}
-
       {%- assign imageName = image.basename | split: " - " -%}
-        <button class="painting" onclick="ShowFullscreen('{{ site.baseurl }}'+'{{ image.path }}')">
-          <img loading="lazy" 
-            style="object-fit: contain; height: 500px;" class="card-img-top" src="{{ site.baseurl }}{{ image.path }}"
-            alt="{{ image.basename }}">
+
+        {%- if image.path contains "small" -%}
+        <button class="painting" onclick="ShowFullscreen(`{{ site.baseurl }}`+`{{ image.path | replace_first: 'small', 'big' }}`)">
+          <img loading="lazy" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
           <div class="painting-body">
             <h3>{{ imageName[0] }}</h3>
-            {%- if imageName[1] == "VENDUE" or imageName[1] == "Vendue" or imageName[1] == "VENDUES" -%}
+            {%- if imageName[1] == "vendue" -%}
             <p>Vendue</p>
             {%- else -%}
             <p>{{ imageName[1] }} - {{ imageName[2] }}</p>
             {%- endif -%}
           </div>
         </button>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </div>
