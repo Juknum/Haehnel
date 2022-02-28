@@ -1,45 +1,7 @@
 ---
 layout: default
 title: Galerie
-description: Choisissez une catégorie!
+description: Explorez mes créations!
 ---
 
-<div class="card-deck">
-
-	<!-- Ailleurs -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="Catégorie 1">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Ailleurs</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/ailleurs" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Déco -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/deco.png" alt="Catégorie 2">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Déco</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/deco" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Famille -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/famille.png" alt="Catégorie 3">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Famille</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/famille" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Silhouettes -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/silhouette.png" alt="Catégorie 4">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Silhouette</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/silhouette" class="stretched-link"></a>
-		</div>
-	</div>
-
-</div>
+{%- include gallery_btns.html -%}

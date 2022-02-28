@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+:root {
+  --dark-1: #f8f9fa;
+  --dark-2: #e9ecef;
+  --dark-3: #dee2e6;
+  --dark-4: #ced4da;
+  --dark-5: #adb5bd;
+  --dark-6: #6c757d;
+  --dark-7: #495057;
+  --dark-8: #343a40;
+  --dark-9: #212529;
+
+  --white: #fdfffc;
+  --black: #011627;
+  --danger: #e71d36;
+  --primary: #2ec4b6;
+  --warning: #ff9f1c;
+
+  --max-width: 965px;
+}
+
+html,
+body {
+  background-color: var(--dark-3);
+  height: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--black);
+}
+
+footer {
+  background-color: var(--dark-4);
+  padding: 5em 5em;
+}
+
+header {
+  background-color: var(--dark-7);
+  padding: 5em 5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+header > h1 {
+  text-transform: uppercase;
+}
+
+nav {
+  background-color: var(--dark-8);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 1em;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav > ul > li {
+  padding: 0 10px;
+}
+
+nav > ul > li > a {
+  font-size: large;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark-3);
+  width: 5em;
+  text-align: center;
+}
+
+nav > ul > li > a:hover {
+  color: var(--dark-5);
+}
+
+strong {
+  font-size: smaller;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding: 2px;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: -5em;
+}
+
+footer > div,
+main {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+footer > div > div {
+  margin: 10px;
+}
+
+footer > div > div > h3 {
+  color: var(--primary);
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+a:hover {
+  color: var(--dark-6);
+}
+
+.card {
+  background-color: var(--dark-3);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px 0 30px;
+}
+
+@media (min-width: 965px) {
+  .card {
+    -webkit-box-shadow: 5px 5px 20px -10px #000;
+    box-shadow: 5px 5px 20px -10px #000;
+  }
+}
+
+.card-title {
+  text-align: center;
+  font-size: medium;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
+
+  width: fit-content;
+  border-bottom: 5px solid var(--primary);
+}
+
+.card-body {
+  margin-bottom: 20px;
+}
+
+.card-body > ul {
+  list-style: "—  ";
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.card-body > ul > li {
+  margin-bottom: 5px;
+}
+
+.card-text {
+  text-align: justify;
+  color: var(--black);
+}
+
+.gallery-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 500px;
+  flex-wrap: wrap;
+}
+
+.gallery-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  max-width: calc((var(--max-width) / 4) - 30px);
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  margin: 5px;
+  align-items: center;
+}
+
+.gallery-btn:hover {
+  cursor: pointer;
+}
+
+.gallery-btn:hover > img {
+  z-index: 1000;
+  -webkit-box-shadow: 5px 5px 20px -10px #000;
+  box-shadow: 5px 5px 20px -10px #000;
+}
+
+.gallery-btn:hover > h3 {
+  border-bottom: 5px solid var(--primary);
+}
+
+.gallery-btn > img {
+  object-fit: contain;
+  max-width: calc((var(--max-width) / 4) - 70px);
+}
+
+.gallery-btn > h3 {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.paintings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.painting {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--dark-3);
+  border: none;
+  border-radius: 8px;
+}
+
+.painting:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 20px -10px #000;
+  box-shadow: 5px 5px 20px -10px #000;
+}
+
+.painting:focus-visible {
+  outline: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.modal-close,
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content > img {
+  object-fit: contain;
+  height: 95%;
+}
+
+.modal-close {
+  z-index: 100;
+}

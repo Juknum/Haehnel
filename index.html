@@ -1,72 +1,36 @@
 ---
 layout: default
-title: Accueil
+title: Valérie Haehnel
+description: Galerie d'art en ligne
 ---
-<div class="card-deck">
-
-	<!-- Ailleurs -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/ailleurs.png" alt="Catégorie 1">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Ailleurs</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/ailleurs" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Déco -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/deco.png" alt="Catégorie 2">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Déco</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/deco" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Famille -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/famille.png" alt="Catégorie 3">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Famille</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/famille" class="stretched-link"></a>
-		</div>
-	</div>
-
-	<!-- Silhouettes -->
-	<div class="card">
-		<img style="object-fit: contain; height: 500px;" src="{{ site.baseurl }}/image/home/silhouette.png" alt="Catégorie 4">
-		<div style="margin-top: 5px; border: 2px solid rgba(0,0,0,.125); font-size: 20px" class="card-body text-center">
-			<p style="margin-bottom: 0px" class="card-text"><i><strong>Silhouette</strong></i></p>
-			<a href="{{ site.baseurl }}/galerie/silhouette" class="stretched-link"></a>
-		</div>
-	</div>
-
-</div>
-
-<hr>
 
 <div class="card">
+	<h4 class="card-title">Me découvrir</h4>
 	<div class="card-body">
-		<h4 class="card-title text-center">Me découvrir</h4>
-		<p align="justify" class="card-text">
+		<p class="card-text">
 			Originaire du Sud de la Meuse, j'ai passé mon BAC Arts Plastiques avant de rejoindre l'Université de Stasbourg. Menant de front des études d'Arts Plastiques et d'Ethnologie, j'ai toujours (ou presque !) imaginé, créé, dessiné, peint...
 			<br>
 			Aujourd'hui, j'enseigne les Arts Appliqués en lycée professionnel et continue de partager mon savoir et le plaisir de créer en animant un club de peinture.
 		</p>
-		<h4 class="card-title text-center">Mes Oeuvres, Émotions et Techniques</h4>
-		<p align="justify" class="card-text">
-			Toutes les toiles aux couleurs vives, de SILHOUETTES à FAMILLE, d'AILLEURS à DECO, permettent de s'évader hors du carcan rigide de la société.
-			<ul>
-				<li align="justify" style="margin-bottom: 10px">
-					Les SILHOUETTES et les FAMILLES offrent au regard du visiteur des formes purifiées faites de courbes et de contre-courbes, de douceur, de dynamisme et de volupté, images fortes conservées de mes nombreux voyages, des Amériques à l'Indonésie en passant par la Scandinavie ou l'Afrique.
-				</li>
-				<li align="justify" style="margin-bottom: 10px">
-					Chaque SILHOUETTE est un long voyage initiatique impliquant un retour sur soi, symbolisant la féminité, la mère et la vie.
-				</li>
-				<li align="justify" style="margin-bottom: 10px">
-					AILLEURS et DECO sont des oeuvres souvent abstraites mettant en avant la couleur et les harmonies qui s'en dégagent. A chacun de s'évader et de laisser cours à son imagination !
-				</li>
-			</ul>
+	</div>
+	<h4 class="card-title">Mes Oeuvres, Émotions et Techniques</h4>
+	<div class="card-body">
+		<p class="card-text">
+			Toutes les toiles aux couleurs vives, de <strong>SILHOUETTES</strong> à <strong>FAMILLE</strong>, d'<strong>AILLEURS</strong> à <strong>DÉCO</strong>, permettent de s'évader hors du carcan rigide de la société.
+		</p>
+		<ul>
+			<li>Les <strong>SILHOUETTES</strong> et les <strong>FAMILLES</strong> offrent au regard du visiteur des formes purifiées faites de courbes et de contre-courbes, de douceur, de dynamisme et de volupté, images fortes conservées de mes nombreux voyages, des Amériques à l'Indonésie en passant par la Scandinavie ou l'Afrique.</li>
+			<li>Chaque <strong>SILHOUETTE</strong> est un long voyage initiatique impliquant un retour sur soi, symbolisant la féminité, la mère et la vie.</li>
+			<li><strong>AILLEURS</strong> et <strong>DÉCO</strong> sont des oeuvres souvent abstraites mettant en avant la couleur et les harmonies qui s'en dégagent. A chacun de s'évader et de laisser cours à son imagination !</li>
+		</ul>
+		<p class="card-text"></p>
 			Les tableaux sont uniques, réalisés avec différentes techniques, aussi bien des fleurs séchées que du cuir, alliant les pastels secs et l'acrylique. Les outils sont tout aussi diversifiés : j'utilise autant les pinceaux, les couteaux, les brosses et brosses à dents, une fourchette ou tout simplement mes doigts, etc...
 		</p>
 	</div>
+</div>
+
+<div class="card">
+	<h4 class="card-title">Collections</h4>
+	
+	{%- include gallery_btns.html -%}
 </div>
