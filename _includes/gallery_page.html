@@ -17,20 +17,12 @@
 
   {%- for image in site.static_files -%}
     {%- if image.path contains include.galleryPath -%}
-      {%- assign imageName = image.basename | split: " - " -%}
       {%- assign found = true -%}
 
         {%- if image.path contains "small" -%}
-        <button class="painting" onclick="ShowFullscreen(`{{ site.baseurl }}`+`{{ image.path | replace_first: 'small', 'big' }}`)">
+        <button class="gallery-btn" onclick="ShowFullscreen(`{{ site.baseurl }}`+`{{ image.path | replace_first: 'small', 'big' }}`)">
           <img loading="lazy" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
-          <div class="painting-body">
-            <h3>{{ imageName[0] }}</h3>
-            {%- if imageName[1] == "vendue" -%}
-            <p>Vendue</p>
-            {%- else -%}
-            <p>{{ imageName[1] }} - {{ imageName[2] }}</p>
-            {%- endif -%}
-          </div>
+          <h3>{{ image.basename }}</h3>
         </button>
       {%- endif -%}
     {%- endif -%}
@@ -40,5 +32,11 @@
     <p>Aucun tableau n'a encore été ajouté!</p>
   {%- endif -%}
 </div>
+
+{%- if found == true -%}
+  <p align="center" class="painting-advice">
+    Pour tout renseignement et volonté d'achat,<br>prenez contact avec moi par mail <a href="mailto:valeriehaehnel7055@gmail.com">valeriehaehnel7055@gmail.com</a>!
+  </p>
+{%- endif -%}
 
 <script type="text/javascript" src="{{ site.baseurl }}/js/ShowFullscreen.js"></script>

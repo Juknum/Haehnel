@@ -39,7 +39,8 @@ footer {
 }
 
 header {
-  background-color: var(--dark-7);
+  background: rgb(0, 68, 95);
+  background: linear-gradient(345deg, rgb(0, 68, 95) 0%, rgba(9,103,121,1) 50%, rgba(46,196,182,1) 100%);
   padding: 5em 5em;
   display: flex;
   justify-content: center;
@@ -50,6 +51,11 @@ header {
 
 header > h1 {
   text-transform: uppercase;
+  color: var(--white);
+}
+
+header > p {
+  color: var(--dark-4);
 }
 
 nav {
@@ -177,14 +183,17 @@ a:hover {
 
 .gallery-btn {
   background-color: transparent;
+  position: relative;
   border: none;
   border-radius: 4px;
   max-width: calc((var(--max-width) / 4) - 30px);
   display: flex;
   flex-direction: column;
   max-height: 400px;
-  margin: 5px;
+  margin: 10px 10px 30px 10px;
   align-items: center;
+  padding: 5px;
+  /* z-index: 0; */
 }
 
 .gallery-btn:hover {
@@ -192,7 +201,6 @@ a:hover {
 }
 
 .gallery-btn:hover > img {
-  z-index: 1000;
   -webkit-box-shadow: 5px 5px 20px -10px #000;
   box-shadow: 5px 5px 20px -10px #000;
 }
@@ -207,7 +215,9 @@ a:hover {
 }
 
 .gallery-btn > h3 {
-  margin-top: 5px;
+  margin: 15px;
+  position: absolute;
+  bottom: -40px;
   text-transform: uppercase;
 }
 
@@ -215,7 +225,12 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;    
+  align-items: center;
+}
+
+.painting-advice {
+  margin: 50px 0;
 }
 
 .painting {
@@ -246,6 +261,7 @@ a:hover {
   display: none;
   position: fixed;
   top: 0;
+  z-index: 1;
   left: 0;
   width: 100%;
   height: 100%;
