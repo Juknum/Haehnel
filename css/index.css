@@ -190,7 +190,6 @@ a:hover {
   max-width: calc((var(--max-width) / 4) - 30px);
   display: flex;
   flex-direction: column;
-  max-height: 400px;
   margin: 10px 10px 30px 10px;
   align-items: center;
   padding: 5px;
