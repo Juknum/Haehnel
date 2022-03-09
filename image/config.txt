@@ -1,1 +1,2 @@
 Police d'écriture watermark: Mutant Academy DC BB
+Couleur: #000 (alpha = 128)

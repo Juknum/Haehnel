@@ -19,10 +19,11 @@
     {%- if image.path contains include.galleryPath -%}
       {%- assign found = true -%}
 
+        {%- assign name = image.basename | split: "-" | last -%}
         {%- if image.path contains "small" -%}
         <button class="gallery-btn" onclick="ShowFullscreen(`{{ site.baseurl }}`+`{{ image.path | replace_first: 'small', 'big' }}`)">
-          <img loading="lazy" src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.basename }}">
-          <h3>{{ image.basename }}</h3>
+          <img loading="lazy" src="{{ site.baseurl }}{{ image.path }}" alt="{{ name }}">
+          <h3>{{ name }}</h3>
         </button>
       {%- endif -%}
     {%- endif -%}
